@@ -6,6 +6,7 @@ export default[
         "specialities": ["cardiologiys"],
         "languages": ["Spanish", "French"],
         "education": ["UT", "OU"],
+        "photo":"./images/drimage.png",
         "reviews": [],
         "__v": 0
     },
@@ -22,6 +23,7 @@ export default[
             "Portuguese"
         ],
         "education": [],
+        "photo":"./images/drimage.png",
         "reviews": [],
         "__v": 0
     },
@@ -38,6 +40,7 @@ export default[
         "education": [
             "U de C"
         ],
+        "photo":"./images/drimage.png",
         "reviews": [],
         "__v": 0
     },
@@ -55,6 +58,7 @@ export default[
         "education": ["UT",
             "U de C"
         ],
+        "photo":"./images/drimage.png",
         "reviews": [],
         "__v": 0
     },
@@ -72,6 +76,7 @@ export default[
         "education": [
             "U de C","UH"
         ],
+        "photo":"./images/drimage.png",
         "reviews": [],
         "__v": 0
     }
