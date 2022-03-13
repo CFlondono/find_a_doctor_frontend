@@ -4,7 +4,7 @@ export default[
         "name": "Gregory",
         "lastname": "House",
         "abbreviations": ["MD"],
-        "specialities": ["cardiologiys"],
+        "specialties": ["cardiologiys"],
         "languages": ["Spanish", "French"],
         "education": ["UT", "OU"],
         "photo":"./images/drimage.png",
@@ -17,7 +17,7 @@ export default[
         "name": "Doug",
         "lastname": "Ross",
         "abbreviations": ["MD"],
-        "specialities": [
+        "specialties": [
             "neurologist",
             "family"
         ],
@@ -36,7 +36,7 @@ export default[
         "name": "Carlos",
         "lastname": "De Los Reyes",
         "abbreviations": ["MD"],
-        "specialities": [
+        "specialties": [
             "physiatrist"
         ],
         "languages": [
@@ -55,7 +55,7 @@ export default[
         "name": "Leonard 'Bones'",
         "lastname": "McCoy",
         "abbreviations": ["MD"],
-        "specialities": [
+        "specialties": [
             "Ortopedist",
             "gediatric"
         ],
@@ -75,7 +75,7 @@ export default[
         "name": "Derek",
         "lastname": "Shepherd",
         "abbreviations": ["MD"],
-        "specialities": [
+        "specialties": [
             "Ortopedist",
             "gediatric"
         ],

@@ -7,9 +7,10 @@ function Navbar(){
                     <Link to ={"/"}>Home</Link>
                     <Link to ={"/admin"}>Admin</Link>
                         {/* <Link to ={"/login"}>Log in</Link> */}
-                        {/* <p>About</p>
-                        <p>Admin</p>
-                        <p>Log in</p> */}
+                        {/* <p>About</p>*/}
+                    <Link to ={"/alldoctors"}>Doctors</Link>
+    
+                
 
                 </div>
         </nav>

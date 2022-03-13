@@ -1,8 +1,8 @@
 function Admin(){
     return(
-        <div>
-            <p>This is the Admin page</p>
-        </div>
+        <div> 
+            <h1>Add a Doctor:</h1> 
+        </div>       
     )
 }
 export default Admin
