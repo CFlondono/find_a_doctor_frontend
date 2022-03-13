@@ -1,6 +1,7 @@
 import Search from './components/Search';
+import DoctorInfo from './components/DoctorInfo';
 import Navbar from './components/Navbar';
-import Doctors from './components/Doctors';
+import Doctors from './pages/Doctors';
 import Admin from './pages/Admin';
 import Home from './pages/Home';
 import {useEffect, useState} from 'react';
@@ -8,9 +9,8 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import staticData from './data';
 import React from 'react';
-import data from './data';
-import DoctorInfo from './components/DoctorInfo';
-import { Link } from "react-router-dom"
+// import data from './data';
+// import { Link } from "react-router-dom"
 // console.log(staticData)
 
 function App() {
@@ -45,8 +45,7 @@ function App() {
           <Route path="/" element={ <Home /> } />
           <Route path="/details" element={ <DoctorInfo  doctors={doctors}/> } />
           <Route path="/doctors" element={ <Doctors  doctors={doctors}/> } />
-
-          <Route path="/admin" element={ <Admin /> } />
+          <Route path="/admin" element={ <Admin doctors={doctors}/>} />
       </Routes>  
       <section className="container">
         {filteredDoctors.map((doctor,index) => {
@@ -62,11 +61,17 @@ function App() {
                 <h3>{doctor.name+" "+doctor.lastname+" . MD"}</h3>
                 <p>{doctor.city}</p>
                   <ul>{doctor.specialties.map(specialty => (
-                      <li>{specialty}</li>  ))}
+                        <li key={doctor._id}>
+                          {specialty}
+                        </li>  
+                      ))}
                   </ul>
                   <p>Languages</p>
                   <ul>{doctor.languages.map(language => (
-                      <li>{language}</li>  ))}
+                        <li key={doctor._id}>
+                          {language}
+                         </li>  
+                      ))}
                   </ul>
               </div>
               {/* </Link> */}

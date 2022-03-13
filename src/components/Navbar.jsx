@@ -8,7 +8,7 @@ function Navbar(){
                     <Link to ={"/admin"}>Admin</Link>
                         {/* <Link to ={"/login"}>Log in</Link> */}
                         {/* <p>About</p>*/}
-                    <Link to ={"/alldoctors"}>Doctors</Link>
+                    <Link to ={"/doctors"}>Doctors</Link>
     
                 
 
