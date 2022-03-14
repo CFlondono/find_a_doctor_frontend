@@ -24,7 +24,7 @@ function App() {
     
   // create an async fetch
   const handleFetch = (query) =>{
-    const URL = "http://localhost:9000/doctors"
+    const URL = process.env.REACT_APP_SERVER_URL+"/doctors"
     fetch(URL).then(resp=>{
       // console.log(resp)
       return resp.json()

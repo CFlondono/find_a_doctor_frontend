@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 const Details  = () => {
         let { id } = useParams()
         const [ doc, setDoc ] = useState(null)
-        const url = 'http://localhost:9000/doctors/'
-        let newUrl = url + id
+        const URL = process.env.REACT_APP_SERVER_URL+"/doctors/"
+        let newUrl = URL + id
         console.log(newUrl)
 
         useEffect(() =>{
@@ -15,7 +15,7 @@ const Details  = () => {
             .catch((err) => console.log('Error!', err))
         },[])
         if (!doc) {
-            return <p>Loading bird information ...</p>
+            return <p>Loading Doctor information ...</p>
           }
     // const {doctorId} = useParams();
 

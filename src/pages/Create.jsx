@@ -11,12 +11,12 @@ const Create = () => {
     
     const newDoctor = async (data) => {
 
-        const URL = "http://localhost:9000/doctors/"
+        const URL = process.env.REACT_APP_SERVER_URL+"/doctors"
         const options = {
             method: "POST",
-            body: {},
-            header:{
-                 "Content-Type" : "application/jason"
+            body: JSON.stringify(createDoc),
+            headers:{
+                 "Content-Type" : "application/json"
                 }
             }
         try{
