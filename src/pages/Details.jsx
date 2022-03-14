@@ -15,27 +15,10 @@ const Details  = () => {
             .catch((err) => console.log('Error!', err))
         },[])
         if (!doc) {
-            return <p>Loading Doctor information ...</p>
+            return <p>Loading Doctor's information ...</p>
           }
-    // const {doctorId} = useParams();
 
-    // const findDoctor = (docId) => {
-    //     for (const doc of props.doctors) {
-    //         if (doc._id === docId) {
-    //             return (
-    //             <div>{doc.name}</div>
-    //             )
-    //         }
-    //     }
-    //     return (
-    //         <div>
-    //             hi
-    //         </div>
-    //     )
-    // }
-    // const doc = findDoctor(doctorId)
-    // console.log(doc)
-    return(
+          return(
         <div className="container">
             < div className = "container_form"> 
                 <h1>Doctor {doc.name}  {doc.lastname},  MD :</h1>
