@@ -48,10 +48,6 @@ function Search(props){
             console.log("This is e.target"+e.target)
         }
     }
-
-
-
-
     const handleChange = (e) =>{
         setSearchTerm(e.target.value)
     }
