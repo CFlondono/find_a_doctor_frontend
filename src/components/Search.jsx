@@ -25,7 +25,6 @@ function Search(props){
             }
         })
         const filteredDocByLanguage = props.doctors.filter((oneDoctor)=>{
-            console.log(oneDoctor)
             const languageArray = oneDoctor.languages ? oneDoctor.languages : [];
             const lowerCaseLanguage = languageArray.map(language => language.toLocaleLowerCase())
             if (searchTerm == ""){
@@ -34,6 +33,18 @@ function Search(props){
               return oneDoctor
             }
         })
+
+        const filteredDocByZipcode = props.doctors.filter((oneDoctor)=>{
+          console.log(oneDoctor)
+          const zipcodeArray = oneDoctor.zipcode ? oneDoctor.zipcode : [];
+          const integerZipcode = zipcodeArray.map(zipcode => zipcode.parseInt())
+          if (searchTerm == ""){
+            return oneDoctor
+          }else if (integerZipcode.includes(searchTerm.parseInt())){
+            return oneDoctor
+          }
+      })
+
 
         //   console.log("This is the result:"+filteredDocByName)
         // filter props.doctors based on the searchterm
@@ -45,8 +56,12 @@ function Search(props){
             // console.log("This is e.target"+e.target)
         }else if (filteredDocByLanguage.length > 0){
             props.setFilteredDoctors(filteredDocByLanguage)
+            // console.log("This is e.target"+e.target)
+        }else if (filteredDocByZipcode.length > 0){
+            props.setFilteredDoctors(filteredDocByZipcode)
             console.log("This is e.target"+e.target)
         }
+
     }
     const handleChange = (e) =>{
         setSearchTerm(e.target.value)
