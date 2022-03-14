@@ -1,6 +1,6 @@
 body {
   /* background-image: url('./images/cross.png'); */
-  background-color: rgb(92, 164, 200);
+  background-color: rgb(51, 127, 165);
 }
 .App {
   text-align: center;
@@ -14,7 +14,7 @@ a{
   color: #161615;
 }
 h1{
-  color: #ff914d;
+  color: gray;
 }
  /* Create Form */
  .header {
@@ -134,7 +134,7 @@ color:white;
   }
   
   .card-title {
-    background-color: rgba(47, 83, 101, 0.776);;
+    background-color: rgba(32, 120, 165, 0.776);;
     color: white;
     border-radius: 0 0 1rem 1rem;
     margin: 0;

@@ -2,7 +2,8 @@ import Search from './components/Search';
 import Details from './pages/Details';
 import Navbar from './components/Navbar';
 import Doctors from './pages/Doctors';
-import Admin from './pages/Admin';
+import Create from './pages/Create';
+import Admin from './pages/Create';
 import Home from './pages/Home';
 import {useEffect, useState} from 'react';
 import { Route, Routes } from 'react-router-dom'
@@ -16,6 +17,7 @@ import Display from './components/Display';
 
 function App() {
   const [doctors,setDoctors] = useState(staticData || [])
+  const [newDoctor, setNewDoctor] = useState({})
   
   // Display the filtered Doctos in App.js instead of doctors
   // Pass Doctors and setFilteredDoctors to the Search component 
@@ -36,6 +38,8 @@ function App() {
     // console.log('testing use effect')
     handleFetch()
   }, []);
+  const addDoctor = (newDoctor) => setDoctors(setDoctors([ ...doctors, newDoctor ]))
+
   return (
   <div className="App">
       <Navbar/>
@@ -44,10 +48,11 @@ function App() {
           <Route path="/" element={ <Home doctors={doctors}/> } />
           <Route path="/details/:id" element={ <Details/> } />
           <Route path="/doctors" element={ <Doctors  doctors={doctors}/> } />
-          {/* <Route path="/admin" element={ <Admin doctors={doctors}/>} /> */}
-      </Routes>  
+          <Route path="/create" element={ <Create addDoctor={addDoctor}/>} />
+          <Route path="/admin" element={ <Admin/>}/>
+
+      </Routes> 
   </div>
-     
   )} 
 
 export default App;
