@@ -52,7 +52,7 @@ const Create = () => {
                     </div>
                     <br></br>
                     <div>
-                    <label for="specialty">choose a specialty:</label>
+                    <label htmlFor="specialty">choose a specialty:</label>
                     <select name="specialty" id="specialty">
                         <option value="Oncologist">Oncologist</option>
                         <option value="Pediatrics">Pediatrics</option>

@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 
 
 function Search(props){ 
@@ -8,39 +8,43 @@ function Search(props){
         e.preventDefault()
         const filteredDocByName = props.doctors.filter((oneDoctor)=>{
             console.log(oneDoctor)
-            if (searchTerm == ""){
+            if (searchTerm === ""){
               return oneDoctor
             }else if (oneDoctor.lastname.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())){
               return oneDoctor
-            }
+            }return false
         })
         const filteredDocBySpeciality = props.doctors.filter((oneDoctor)=>{
             // console.log(oneDoctor)
             const specialtyArray = oneDoctor.specialties ? oneDoctor.specialties : [];
             const lowerCaseSpecialty = specialtyArray.map(specialty => specialty.toLocaleLowerCase())
-            if (searchTerm == ""){
+            if (searchTerm === ""){
               return oneDoctor
             }else if (lowerCaseSpecialty.includes(searchTerm.toLocaleLowerCase())){
               return oneDoctor
             }
+              return false
         })
         const filteredDocByLanguage = props.doctors.filter((oneDoctor)=>{
             console.log(oneDoctor)
             const languageArray = oneDoctor.languages ? oneDoctor.languages : [];
             const lowerCaseLanguage = languageArray.map(language => language.toLocaleLowerCase())
-            if (searchTerm == ""){
+            if (searchTerm === ""){
               return oneDoctor
             }else if (lowerCaseLanguage.includes(searchTerm.toLocaleLowerCase())){
               return oneDoctor
             }
+              return false
         })
 //filter by zipcode
         const filteredDocByZipcode = props.doctors.filter((oneDoctor)=>{
             const searchZip = String(oneDoctor.zipcode)
-            if (searchTerm == ""){
+            if (searchTerm === ""){
               return oneDoctor
             }else if (searchZip.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())){
               return oneDoctor
+            }else{
+              return
             }
         })
         //   console.log("This is the result:"+filteredDocByName)
