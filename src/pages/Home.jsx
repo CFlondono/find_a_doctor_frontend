@@ -2,7 +2,7 @@ import Display from "../components/Display";
 import Search from "../components/Search";
 import {useState, useEffect} from "react";
 
-function Home(props){
+function Home(){
     const [filteredDoctors,setFilteredDoctors] = useState([])
     const [doctors,setDoctors] = useState ([])
 
