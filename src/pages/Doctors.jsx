@@ -1,11 +1,15 @@
+import { Link } from "react-router-dom"
+
 function Doctor(props) {
     const allDoctors = props.doctors.map((doctor) => {
             return(
                 <div className="card">
-                    <div className="card-image">
-                    <img src={process.env.PUBLIC_URL + doctor.img}
-                        alt={doctor.name+doctor.lastname}/>
-                    </div>
+                        <Link to={`/details/${ doctor._id }`} >
+                          <div className="card-image">
+                            <img src={process.env.PUBLIC_URL + doctor.img}
+                            alt={doctor.name+doctor.lastname}class="responsive"/>
+                           </div> 
+                        </Link>    
                     <div className="card-title">
                         <h3>{doctor.name+" "+doctor.lastname+" . MD"}</h3>
                         <p>{doctor.city}</p>
