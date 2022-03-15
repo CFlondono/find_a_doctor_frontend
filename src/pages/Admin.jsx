@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom"
+
 function Admin (){
     return(
     <div className="container">
-        <h1>Admin</h1>
+        <Link to={"/create"}>
+         <h1>Add a new doctor</h1>
+         </Link>
     </div>
     )
 }

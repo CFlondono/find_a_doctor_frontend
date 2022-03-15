@@ -41,10 +41,16 @@ const Create = () => {
             < div className = "container_form"> 
                 <h2>Add a New Doctor</h2>
                 <form onSubmit={ handleSubmit }>
+                    <div>
                     <label htmlFor='name'>Name</label>
                     <input required type='text' name='name' onChange={ handleChange } />
+                    </div>
+                    <br></br>
+                    <div>
                     <label htmlFor='lastname'>Last Name</label>
                     <input required type='text' name='lastname' onChange={ handleChange } />
+                    </div>
+                    <br></br>
                     <button>Submit</button>
                 </form>
             </div>

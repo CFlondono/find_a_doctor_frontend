@@ -132,6 +132,10 @@ color:white;
     display: flex;
     justify-content: center;
   }
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
   
   .card-title {
     background-color: rgba(32, 120, 165, 0.776);;
@@ -158,7 +162,7 @@ color:white;
     align-items:flex-start;
     justify-content:space-between;
     align-items: flex-start;
-    width: 50%;
+    width: 30%;
     margin: auto;
   }
   button{

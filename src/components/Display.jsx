@@ -9,7 +9,7 @@ return(
         <Link to={`/details/${ doctor._id }`} key={ idx }>
         <div className="card-image">
           <img src={process.env.PUBLIC_URL + doctor.img}
-            alt={doctor.name+doctor.lastname}
+            alt={doctor.name+doctor.lastname} class="responsive"
           />
         </div>
         </Link>

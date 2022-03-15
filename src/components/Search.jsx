@@ -10,7 +10,7 @@ function Search(props){
             console.log(oneDoctor)
             if (searchTerm == ""){
               return oneDoctor
-            }else if (oneDoctor.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())){
+            }else if (oneDoctor.lastname.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())){
               return oneDoctor
             }
         })
