@@ -63,7 +63,7 @@ const Create = () => {
                     </div>
                     <br></br>
                     <div>
-                    <label for="language">choose a specialty:</label>
+                    <label htmlfor="language">choose a specialty:</label>
                     <select name="language" id="language">
                         <option value="Spanish">Spanish</option>
                         <option value="English">English</option>
