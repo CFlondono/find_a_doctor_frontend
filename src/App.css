@@ -1,6 +1,10 @@
 body {
   /* background-image: url('./images/cross.png'); */
   background-color: rgb(51, 127, 165);
+  padding:0%;
+  margin:0% auto;
+  width: 100%; 
+  box-sizing: border-box;
 }
 .App {
   text-align: center;
@@ -17,7 +21,7 @@ h1{
   color: gray;
 }
  /* Create Form */
- .header {
+.header {
   /* header section */
   padding: 30px;
   height: 250px;
@@ -27,15 +31,14 @@ h1{
 }
 .header__title {
   /* header section title */
-margin-bottom: 30px;
-font-size: 40px;
-color:white;
+  margin-bottom: 30px;
+  font-size: 40px;
+  color:white;
 }
 .header__form {
   /* form body */
   outline: 0;
   border-style: solid;
-  
   min-width: 50vw;
   height: 60px;
   display:flex;
@@ -63,15 +66,14 @@ color:white;
 }
 
   /* Navigation */
-  .navigation {
-    /* navigation wrapper */
-    display: flex;
-    width: 97%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 30px;
-    background-color: white;
-    width: 100%;
+.navigation {
+  /* navigation wrapper */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  background-color: white;
+  /* width: 100%; */
   }
   
   .navigation h1 {
@@ -84,7 +86,7 @@ color:white;
     /* flex-shrink: 1; */
     justify-content: space-between;
   }
-  .navigation__links-wrapper > * {
+  .navigation__links-wrapper {
     margin-left: 30px;
   }
   .container {
@@ -95,7 +97,7 @@ color:white;
     flex-direction: row;
     align-items: center;
     justify-content:space-between;
-    width: 100%;
+    /* width: 100%; */
     height:100%;
     padding: 0px 30px 30px;
     flex: 1;
@@ -114,12 +116,6 @@ color:white;
   }
 
   .card {
-    /* border: 1px solid lightgray; */
-    /* width: 30%;
-    height: 350px;
-    border-radius: 1rem;
-    display: grid;
-    grid-template-rows: 2fr 1fr; */
     transition: 0.3s;
     width: 20%;
     padding-bottom: 0px;

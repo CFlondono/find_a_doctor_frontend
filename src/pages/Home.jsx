@@ -46,9 +46,9 @@ function Home(){
             <section className="container">
                 <h1>Top-searched specialties</h1>
                     <div className="container_icons">
-                        <button onClick={() => filterDocBySpeciality("family")}>
+                        {/* <button onClick={() => filterDocBySpeciality("family")}>
                             <img src={process.env.PUBLIC_URL + "/images/specialties/family.png"} alt="Family Practice" className="responsive"/>
-                        </button>
+                        </button> */}
                         <button onClick={() => filterDocBySpeciality("general practice")}>
                             <img src={process.env.PUBLIC_URL + "/images/specialties/general.png"} alt="General Practice" className="responsive"/>
                         </button>
